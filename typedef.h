@@ -3,13 +3,13 @@
   Corporation: VOLOVIQUE
   Date: Warsaw 23-VII-2015
   Destination: 
-    Conecern to Pic18fxxkxx devices for XC8 compiler
+    Concern to Pic18fxxkxx devices for XC8 compiler
 
   File name:
     typedef.h
 
   File destination:
-    This file give simple type definition
+    This file gives simple type definition
 
   Dependecies:
     No hardware dependecies
