@@ -1,12 +1,12 @@
 Blink LED
 =========
 
-Blink an LED at a 1 Hz frequency.
+Blink an LED at about 1 Hz frequency.
 
-### Hardware for this example
+### Hardware specification for this example
  - MCLR input pin must be connected to VDD.
- - An LED must be connected to pin RC0. LED anode must be connected to the pin through a ~1k ohm resistor and the LED cathode must be connected to GND.
+ - An LED must be connected to pin PORTB0. LED anode must be connected to the pin through a ~330 ohm resistor and the LED cathode must be connected to GND.
 
 ### Notes
- - `#pragma config FOSC = INTOSCIO_EC` selects internal oscillator as primary oscillator. Default frequency is 1 MHz, which will be the frequency of this example.
- - `#include <delay.h>` provides access to delay functions. [delay.h](http://sourceforge.net/p/sdcc/code/HEAD/tree/trunk/sdcc/device/include/pic16/delay.h) in SDCC repository.
+ - `OSCCONbits.IRCF2 = 1, OSCCONbits.IRCF1 = 1, OSCCONbits.IRCF0 = 1` selects internal oscillator as source for PLL which is set x4. Default frequency for this example is 64MHz using PLLis 16 MHz.
+  - User application should start from address 0x1000. Bootloader application reside from 0x0000 up to 0x0FFF.
